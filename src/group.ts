@@ -27,5 +27,15 @@ export const group = <T extends Record>(
   collection: T[],
   key: keyof T,
 ): { [key: string]: T[] } => {
-  return {};
+  const groupedRecords: { [key: string | number | symbol]: T[] } = {};
+
+  for (const record of collection) {
+    const keyValue = record[key];
+    if (!groupedRecords[keyValue]) {
+      groupedRecords[keyValue] = [];
+    }
+
+    groupedRecords[keyValue].push(record);
+  }
+  return groupedRecords;
 };
