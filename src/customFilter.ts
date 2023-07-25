@@ -7,7 +7,7 @@ export function customFilter<T>(array: T[], callback: FilterCallBack<T>): T[] {
         if (callback(array[i], i, array)) {
             filteredArray.push(array[i]);
         }
-    }
+    };
 
     return filteredArray;
 }
