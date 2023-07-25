@@ -1,3 +1,4 @@
+import { customIncludes } from './customIncludes';
 /**
  * Retorna um array de itens únicos e comuns entre os arrays da direita e da esquerda.
  *
@@ -8,5 +9,17 @@
  * @returns somente os itens definidos.
  */
 export const intersection = (left: number[], right: number[]): number[] => {
-  return null;
+  const result: number[] = [];
+
+  for (const item of left) {
+    for (const rightItem of right) {
+      if (item === rightItem && !customIncludes(result, item)) {
+        result.push(item);
+        break;
+      }
+    }
+  }
+ 
+
+  return result;
 };
