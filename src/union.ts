@@ -9,5 +9,23 @@
  * @returns somente os itens definidos.
  */
 export const union = <T>(...args: T[]): T[] => {
-  return null;
+  const uniqueItems: T[] = [];
+
+  for (const array of args) {
+    if (Array.isArray(array)) {
+      for (const item of array) {
+        let exists = false;
+        for (const uniqueItem of uniqueItems) {
+          if (item === uniqueItem) {
+            exists = true;
+            break;
+          }
+        }
+        if (!exists) {
+          uniqueItems.push(item);
+        }
+      }
+    }
+  }
+  return uniqueItems;
 };
