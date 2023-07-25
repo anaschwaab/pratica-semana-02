@@ -20,5 +20,15 @@ import { Record } from '../types/record';
  * @returns
  */
 export const template = (templateString: string, matchers: Record): string => {
-  return null;
+  const regex = /\{\{(\w+)\}\}/g;
+
+  const result = templateString.replace(regex, (_match, key) => {
+    if (matchers.hasOwnProperty(key)) {
+      return String(matchers[key]);
+    } else {
+      return _match;
+    }
+  });
+  
+  return result;
 };
