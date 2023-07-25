@@ -12,7 +12,7 @@
  */
 export const chunk = (valores: number[], tamanho: number): number[][] => {
   const result: number[][] = [];
-  
+
   for (let i = 0; i < valores.length; i += tamanho) {
     result.push(valores.slice(i, i + tamanho));
   }

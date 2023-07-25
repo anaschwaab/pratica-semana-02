@@ -29,6 +29,6 @@ export const template = (templateString: string, matchers: Record): string => {
       return _match;
     }
   });
-  
+
   return result;
 };

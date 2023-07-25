@@ -15,7 +15,7 @@ export const invert = (record: Record): Record => {
   for (const key in record) {
     if (record.hasOwnProperty(key)) {
       const value = record[key];
-        invertedRecord[value.toString()] = key;
+      invertedRecord[value.toString()] = key;
     }
   }
   return invertedRecord;

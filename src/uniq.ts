@@ -1,4 +1,4 @@
-import { customIncludes } from "./customIncludes";
+import { customIncludes } from './customIncludes';
 
 /**
  * Retorna um array com todos os elementos únicos.
@@ -13,7 +13,7 @@ export const uniq = <T>(args: T[]): T[] => {
   const uniqueItems: T[] = [];
 
   for (const item of args) {
-    if(!customIncludes<T>(uniqueItems, item)) {
+    if (!customIncludes<T>(uniqueItems, item)) {
       uniqueItems.push(item);
     }
   }

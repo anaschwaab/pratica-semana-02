@@ -11,10 +11,16 @@ export const compact = (items: unknown[]): unknown[] => {
   const result = [];
 
   for (const item of items) {
-    if (item !== false && item !== 0 && item !== '' && item !== null && item !== undefined) {
-        result.push(item);
+    if (
+      item !== false &&
+      item !== 0 &&
+      item !== '' &&
+      item !== null &&
+      item !== undefined
+    ) {
+      result.push(item);
     }
   }
-  
+
   return result;
 };

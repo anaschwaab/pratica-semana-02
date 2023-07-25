@@ -10,7 +10,8 @@ export const pascalCase = (word: string): string => {
   const wordsArray = word.split(/[\s_-]+/);
 
   for (let i = 0; i < wordsArray.length; i++) {
-    wordsArray[i] = wordsArray[i].charAt(0).toUpperCase() + wordsArray[i].slice(1);
+    wordsArray[i] =
+      wordsArray[i].charAt(0).toUpperCase() + wordsArray[i].slice(1);
   }
 
   const result = wordsArray.join('');

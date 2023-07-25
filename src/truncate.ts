@@ -9,11 +9,11 @@
  * @param size
  */
 export const truncate = (text: string, size: number): string => {
-  if (size < 3) return "...";
+  if (size < 3) return '...';
 
   if (text.length <= size) return text;
 
-  const result = text.slice(0, size - 3) + "...";
+  const result = text.slice(0, size - 3) + '...';
 
   return result;
 };
