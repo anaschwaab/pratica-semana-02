@@ -1,3 +1,4 @@
+import { customIncludes } from './customIncludes';
 import { Record } from '../types/record';
 
 /**
@@ -15,5 +16,12 @@ export const omit = <T extends Record>(
   record: T,
   ...args: (keyof T)[]
 ): Record => {
-  return null;
+  const newObject: Partial<T> = {};
+
+  for (const key in record) {
+    if (record.hasOwnProperty(key) && !customIncludes(args, key)) {
+      newObject[key] = record[key];
+    }
+  }
+  return newObject as Record;
 };
