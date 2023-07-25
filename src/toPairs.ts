@@ -12,5 +12,13 @@ type Record = {
  * @returns
  */
 export const toPairs = (record: Record): KeyAndValue[] => {
-  return null;
+  const pairs: KeyAndValue[] = [];
+
+  for (const key in record) {
+    if (Object.prototype.hasOwnProperty.call(record, key)) {
+      const value = record[key];
+      pairs.push([key, value]);
+    }
+  }
+  return pairs;
 };
