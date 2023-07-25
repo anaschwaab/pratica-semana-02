@@ -13,6 +13,5 @@ export const camelCase = (word: string): string => {
   }
 
   const result = words.join('');
-  console.log(result)
   return result;
 };
