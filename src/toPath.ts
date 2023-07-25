@@ -1,3 +1,5 @@
+import { customFilter } from "./customFilter";
+
 /**
  * Transforma uma string no formato de dot notation
  * (https://docs.mongodb.com/manual/core/document/#dot-notation) em um array
@@ -12,6 +14,9 @@
  * @param path
  * @returns
  */
+
 export const toPath = (path: string): string[] => {
-  return null;
+  const result = customFilter(path.split(/\.|\[|\]/), (part) => part !== '');
+
+  return result;
 };
