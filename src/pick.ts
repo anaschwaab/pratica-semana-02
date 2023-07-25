@@ -15,5 +15,12 @@ export const pick = <T extends Record>(
   record: T,
   ...args: (keyof T)[]
 ): Record => {
-  return null;
+  const pickedFields: Partial<T> = {};
+
+  for (const arg of args) {
+    if (record.hasOwnProperty(arg)) {
+      pickedFields[arg] = record[arg];
+    }
+  }
+  return pickedFields as Record;
 };
