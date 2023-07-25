@@ -5,5 +5,7 @@
  * @returns o texto enviado por parâmetro, alterado para kebabCase.
  */
 export const kebabCase = (word: string): string => {
-  return '';
+  const result = word.replace(/[\s_]+/g, '-').toLowerCase();
+  
+  return result;
 };
