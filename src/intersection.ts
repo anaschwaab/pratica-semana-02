@@ -19,7 +19,6 @@ export const intersection = (left: number[], right: number[]): number[] => {
       }
     }
   }
- 
 
   return result;
 };

@@ -9,11 +9,11 @@
  * @param start
  */
 export const range = (size: number, start = 0) => {
-    const result: number[] = [];
+  const result: number[] = [];
 
-    for (let i = 0; i < size; i++) {
-        result.push(start + i);
-    }
+  for (let i = 0; i < size; i++) {
+    result.push(start + i);
+  }
 
-    return result;
+  return result;
 };

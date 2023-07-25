@@ -14,6 +14,6 @@ export const fromPairs = (...args: KeyAndValue[]) => {
   for (const [key, value] of args) {
     result[key] = value;
   }
-  
+
   return result;
 };

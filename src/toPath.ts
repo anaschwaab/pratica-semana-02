@@ -1,4 +1,4 @@
-import { customFilter } from "./customFilter";
+import { customFilter } from './customFilter';
 
 /**
  * Transforma uma string no formato de dot notation
@@ -16,7 +16,7 @@ import { customFilter } from "./customFilter";
  */
 
 export const toPath = (path: string): string[] => {
-  const result = customFilter(path.split(/\.|\[|\]/), (part) => part !== '');
+  const result = customFilter(path.split(/\.|\[|\]/), part => part !== '');
 
   return result;
 };

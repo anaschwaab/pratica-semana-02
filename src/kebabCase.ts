@@ -6,6 +6,6 @@
  */
 export const kebabCase = (word: string): string => {
   const result = word.replace(/[\s_]+/g, '-').toLowerCase();
-  
+
   return result;
 };

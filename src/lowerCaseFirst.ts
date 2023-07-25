@@ -1,13 +1,12 @@
 export const lowerCaseFirst = (text: string): string => {
-    if (test.length === 0) {
-        return text;
-    }
-    
-    const firstLetter = text[0].toLowerCase();
-    const restOfText = text.slice(1);
+  if (test.length === 0) {
+    return text;
+  }
 
-    const result = firstLetter + restOfText
+  const firstLetter = text[0].toLowerCase();
+  const restOfText = text.slice(1);
 
-    return result;
-    
-}
+  const result = firstLetter + restOfText;
+
+  return result;
+};
